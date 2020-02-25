@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>love calculator</title>
+		
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	input:focus{
+		outline: none;
+	}
+	input{
+		background-color: red;
+	}
+	input::placeholder{
+		color: white;
+
+	}
+	.container{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		border:10px solid rgba(255,0,0,0.3);
+		background-color: rgba(255,0,0,0.5);
+	}
+	.card{
+		
+		background-color: transparent;
+		
+;
+	}
+	body{
+		background: url("love 3.jpg");
+		width: 100%;
+		height: 100vh;
+		background-size: round;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: red;
+	}
+	*{
+		font-family: megrim;
+	}
+</style>
+
+
+</head>
+<body>
+	<div class="container m-auto">
+	<div class="card">
+<h1 class="card-header text-center text-white bg-danger">love calculator</h1>
+<div class="card-body m-auto">
+		<form class="form-inline">
+			
+			 <div class="form-group">
+			<input  type="text" style="color:white; text-align: center;" placeholder="enter your name" id="name">
+			</div> 
+          <pre class="text-danger"> + </pre>
+			
+		    <div class="form-group" style="color:red">
+			<input  type="text" style="color:white; text-align: center;" placeholder="enter your love name" id="lname"> 
+			</div>
+
+		</form>
+		</div>
+		<button class="btn m-auto w-50" onclick="checkloveper()" style="background-color:#FD1500" >check</button><br>
+		<div class="m-auto">
+			<input  type="text"   style="background-color:tomato; text-align: center;" id="lovevalue">
+			</div>
+		<br>
+	</div>
+	<div class="card-footer  text-center "  style="background-color:tomato; text-align: center;color:red!important;font-family: megrim">God Bless Your RelationShip</div>
+   
+	</div>
+
+	<script>
+ function checkloveper(){
+
+  var name = document.getElementById('name').value;
+  var lname = document.getElementById('lname').value;
+
+  if(name == "")
+  {
+   alert('Please enter your name');
+  }
+  else if (name.length <=2 ) 
+  {
+   alert('Min lenght is 3')
+  }
+  else if(!isNaN(name))
+  {
+   alert('Numbers are not allowed');
+  }
+
+  else if(lname == "")
+  {
+   alert('Please enter your love name');
+  }
+  else if (lname.length <=2 ) {
+   alert('Min lenght is 3')
+  }
+  else if(!isNaN(lname)){
+   alert('Numbers are not allowed');
+  }
+  else
+  {
+  var lovdata = Math.random() * 100;
+  lovdata = Math.floor(lovdata);
+  document.getElementById('lovevalue').value = lovdata + "%"; 
+  }
+  
+ }
+</script>
+
+
+</body>
+</html>
